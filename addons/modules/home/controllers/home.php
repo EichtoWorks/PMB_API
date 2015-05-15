@@ -26,9 +26,11 @@ class Home extends Public_Controller {
 	public function index()
 	{
 		$data['method_runner'] = Modules::run('test/testhmvc');
-		$this->template
-			 ->set_layout('homepage')
-			 ->build('welcome_message',$data );
+		// $this->template
+		// 	 ->set_layout('homepage')
+		// 	 ->build('welcome_message',$data );
+
+		$this->load->view('welcome_message');
 	}
 	
 	public function nosession()
