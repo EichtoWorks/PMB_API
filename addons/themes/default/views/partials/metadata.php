@@ -5,7 +5,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html><head>
-    <title><?php echo $template['title']; ?></title>
+    <title><?php #echo $template['title']; ?>PMB API - Test Query</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -19,6 +19,8 @@
     <script src="<?php echo BASE_URL . THEME_PATH;?>/js/skel.min.js"></script>
     <script src="<?php echo BASE_URL . THEME_PATH;?>/js/skel-layers.min.js"></script>
     <script src="<?php echo BASE_URL . THEME_PATH;?>/js/init.js"></script>
+    <script src="<?php echo BASE_URL . THEME_PATH;?>/js/run_prettify.js"></script>
+    <script src="<?php echo BASE_URL . THEME_PATH;?>/js/prettify.js"></script>
     <noscript>
         <link rel="stylesheet" href="<?php echo BASE_URL . THEME_PATH;?>/css/skel.css" />
         <link rel="stylesheet" href="<?php echo BASE_URL . THEME_PATH;?>/css/style.css" />
@@ -26,6 +28,8 @@
     </noscript>
     <!--[if lte IE 8]><link rel="stylesheet" href="<?php echo BASE_URL . THEME_PATH;?>/css/ie/v8.css" /><![endif]-->
     
+    <link rel="stylesheet" href="<?php echo BASE_URL . THEME_PATH;?>/css/prettify.css" />
+
     <?php echo $template['metadata']; ?>
     
 </head>
@@ -33,7 +37,7 @@
 
 <!-- Header -->
 <header id="header">
-    <h1><a href="index.html">Flare</a> - online stores</h1>
+    <h1><a href="index.html">PMB Query</a></h1>
     <nav id="nav">
     	<?php echo $this->template->load_view('partials/navigations'); ?>
     </nav>

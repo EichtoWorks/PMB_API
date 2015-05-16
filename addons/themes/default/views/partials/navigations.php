@@ -1,4 +1,4 @@
-<ul>
+<ul style="display: none">
 	<?php if($this->current_user ): ?>
     <li>
         <a href="<?php echo BASE_URL. 'dashboard' ?>"><?php echo $this->current_user->first_name .' '. $this->current_user->last_name ?> <i class="icon fa-angle-down"></i></a>
