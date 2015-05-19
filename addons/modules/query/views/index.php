@@ -23,11 +23,8 @@
 			</div>
 		<?php echo form_close(); ?>
 	</div>
+</div>
 
-	<div class="12u" id="QueryResult">
-		<h3 style="text-align:center">Result</h3>
-		<xpm class="prettyprint">
-<?php echo $QueryResult ? $QueryResult : ''; ?>
-		</xpm>
-	</div>
+<div class="12u" id="QueryResult">
+	<?php echo $QueryResult ? $QueryResult : ''; ?>
 </div>

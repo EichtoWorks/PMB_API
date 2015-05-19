@@ -16,6 +16,10 @@ class Goals extends REST_Controller
 	function getGoals_get()
 	{
 		$getAllGoals = $this->goals->getAll();
+		echo "<pre>";
+			print_r($getAllGoals);
+		echo "</pre>";
+		exit;
 	
 		$data = array(
 					"Major" => array(

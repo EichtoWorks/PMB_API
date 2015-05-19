@@ -2,20 +2,48 @@
 
 class Goals_model extends CI_Model 
 {
+	protected $_dbname = 'goals';
 
 	function __construct()
 	{
 		parent::__construct();
 	}
 
+	/*
+	 * Function:getAll() <- Public
+	 * All Goals Record
+	 */
+
 	public function getAll()
 	{
 		$query = $this->db
-					  ->get('goals');
+						->select()
+						->from($this->_dbname)
+						->get()
+						->result();
 
-		$result = $query->row_array();
+		return $query;
+	}
 
-		return $result;
+	/* 
+	 * Function:getByID($id = INT) <- Public
+	 * Get Specific Goal Record with 'ID' parameter
+	 */
+	public function getByID($id = 0)
+	{
+		$query = $this->db
+						->select()
+						->from($this->_dbname)
+						->where('id', $id)
+						->get()
+						->row();
+
+		return $query;
+	}
+
+	public function createGoal($parameters = array())
+	{
+		
 	}
 
 }
